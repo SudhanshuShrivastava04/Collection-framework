@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ArrayListFramework {
     public static void main(String[] args) {
@@ -18,8 +20,20 @@ public class ArrayListFramework {
         //this won't make a duplicate arraylist
         System.out.println(list03);
 
-        list01.set(0,0);
+        list02.set(1,0);
         System.out.println("Updated list 01: " + list01);
         System.out.println("Updated list 03: " + list03);
+
+        LinkedList<String> linkedList = new LinkedList<>();
+        linkedList.add("Uhh!");
+        linkedList.add("Hello");
+        linkedList.add("World");
+        System.out.println(linkedList);
+        ListIterator<String> iterator = linkedList.listIterator();
+        System.out.println(iterator.next());
+        // next --> return value then index++
+        System.out.println(iterator.next());
+        // prev --> --index then return value
+        System.out.println(iterator.previous());
     }
 }
